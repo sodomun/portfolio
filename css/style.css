@@ -6,14 +6,34 @@
 }
 
 :root {
+  --header-h: 56px;
+  --max-w: 900px;
+}
+
+[data-theme="light"] {
+  --color-bg: #f5f5f5;
+  --color-surface: #ffffff;
+  --color-border: #e0e0e0;
+  --color-text: #1a1a1a;
+  --color-muted: #666;
+  --color-accent: #0f0f0f;
+  --color-header-bg: rgba(245, 245, 245, 0.88);
+  --color-placeholder-start: #e8e8e8;
+  --color-placeholder-end: #d4d4d4;
+  --card-hover-border: #bbb;
+}
+
+[data-theme="dark"] {
   --color-bg: #0f0f0f;
   --color-surface: #1a1a1a;
   --color-border: #2a2a2a;
   --color-text: #e8e8e8;
   --color-muted: #888;
   --color-accent: #fff;
-  --header-h: 56px;
-  --max-w: 900px;
+  --color-header-bg: rgba(15, 15, 15, 0.88);
+  --color-placeholder-start: #1e1e1e;
+  --color-placeholder-end: #2a2a2a;
+  --card-hover-border: #444;
 }
 
 html {
@@ -40,7 +60,7 @@ a {
   left: 0;
   right: 0;
   height: var(--header-h);
-  background: rgba(15, 15, 15, 0.88);
+  background: var(--color-header-bg);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--color-border);
   z-index: 100;
@@ -77,6 +97,39 @@ a {
 .header-nav a:hover,
 .header-nav a.active {
   color: var(--color-accent);
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--color-border);
+  border-radius: 100px;
+  width: 36px;
+  height: 20px;
+  cursor: pointer;
+  position: relative;
+  transition: border-color 0.2s;
+}
+
+.theme-toggle-icon::before {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--color-muted);
+  transition: transform 0.2s, background 0.2s;
+}
+
+[data-theme="dark"] .theme-toggle-icon::before {
+  transform: translateX(16px);
 }
 
 /* ===== Sections ===== */
@@ -162,7 +215,7 @@ a {
 }
 
 .card:hover {
-  border-color: #444;
+  border-color: var(--card-hover-border);
 }
 
 .card-img {
@@ -172,7 +225,7 @@ a {
 }
 
 .card-img.placeholder {
-  background: linear-gradient(135deg, #1e1e1e 0%, #2a2a2a 100%);
+  background: linear-gradient(135deg, var(--color-placeholder-start) 0%, var(--color-placeholder-end) 100%);
 }
 
 .card-body {
@@ -218,6 +271,27 @@ a {
 
 .links-list a:hover {
   color: var(--color-accent);
+}
+
+/* ===== Footer ===== */
+.footer {
+  position: relative;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-bar {
+  position: absolute;
+  inset: 0;
+  background: var(--color-border);
+}
+
+.footer-year {
+  position: relative;
+  font-size: 13px;
+  color: var(--color-muted);
 }
 
 /* ===== Responsive ===== */

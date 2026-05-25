@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,11 +12,16 @@
   <header class="header">
     <div class="header-inner">
       <a href="#hero" class="header-logo">Portfolio</a>
-      <nav class="header-nav">
-        <a href="#about">About me</a>
-        <a href="#works">Works</a>
-        <a href="#links">Links</a>
-      </nav>
+      <div class="header-right">
+        <nav class="header-nav">
+          <a href="#about">About me</a>
+          <a href="#works">Works</a>
+          <a href="#links">Links</a>
+        </nav>
+        <button class="theme-toggle" aria-label="Toggle theme">
+          <span class="theme-toggle-icon"></span>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -101,6 +106,11 @@
       </ul>
     </div>
   </section>
+
+  <footer class="footer">
+    <div class="footer-bar"></div>
+    <div class="footer-year">2026</div>
+  </footer>
 
   <script src="js/main.js"></script>
 </body>
