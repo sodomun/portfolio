@@ -21,6 +21,7 @@
   --color-placeholder-start: #e8e8e8;
   --color-placeholder-end: #d4d4d4;
   --card-hover-border: #bbb;
+  --color-card-img-bg: #e8e8e8;
 }
 
 [data-theme="dark"] {
@@ -34,6 +35,7 @@
   --color-placeholder-start: #1e1e1e;
   --color-placeholder-end: #2a2a2a;
   --card-hover-border: #444;
+  --color-card-img-bg: #d0d0d0;
 }
 
 html {
