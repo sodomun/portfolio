@@ -6,6 +6,4 @@
 
 以下がポートフォリオのリンクです。
 
-## Site Link
-
-[Portfolio Site](https://github.com/sodomun)
+[Portfolio Site](https://sodomun.github.io/portfolio/)
