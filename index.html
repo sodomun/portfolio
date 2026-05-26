@@ -4,7 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/sections.css" />
+  <link rel="stylesheet" href="css/modal.css" />
 </head>
 <body>
 
@@ -61,8 +64,8 @@
           <div class="card-img"><img src="images/projects/ReTone.png" alt="ReTone" /></div>
           <div class="card-body">
             <h3 class="card-title">ReTone</h3>
-            <p class="card-desc">言葉の棘や冷たい印象といった余計なノイズを取り除き、本来伝えたい内容だけを、ストレスなく正しく受け取れるようにするチャットアプリ。</p>
-            <a href="#" class="card-link">View &rarr;</a>
+            <p class="card-desc">言葉の棘や冷たい印象といった余計なノイズを取り除き、本来伝えたい内容だけを、ストレスなく正しく受け取れるようにするチャットアプリです。</p>
+            <button class="card-link" data-modal="modal-retone">詳しく見る</button>
           </div>
         </div>
 
@@ -70,8 +73,8 @@
           <div class="card-img"><img src="images/projects/AIDiary.png" alt="AI日記" /></div>
           <div class="card-body">
             <h3 class="card-title">AI日記</h3>
-            <p class="card-desc">日記としての通常機能に加えて、AIによるフィードバックを実装したWebアプリです。日記を自己完結ではなくインタラクティブな体験へと拡張しました。</p>
-            <a href="#" class="card-link">View &rarr;</a>
+            <p class="card-desc">日記としての通常機能に加えて、AIによるフィードバックを実装したWebアプリです。</p>
+            <button class="card-link" data-modal="modal-aidiary">詳しく見る</button>
           </div>
         </div>
 
@@ -79,9 +82,8 @@
           <div class="card-img"><img src="images/projects/GreatCalender.png" alt="すごいカレンダー" /></div>
           <div class="card-body">
             <h3 class="card-title">すごいカレンダー</h3>
-            <p class="card-desc">AIによる自動化機能を搭載した、カレンダー型タスク管理アプリです。
-ハッカソンでのチーム開発として制作しました。<br>現在、リポジトリは private のためコードを公開していません。また、共同開発プロジェクトである都合上、現時点では public 化が難しい状況です。<br>加えて、実行用の jar ファイルも未作成のため、現段階ではアプリを直接体験していただくことができません。今後、修正していく予定です。</p>
-            <a href="#" class="card-link">View &rarr;</a>
+            <p class="card-desc">AIによる自動化機能を搭載した、カレンダー型タスク管理アプリです。</p>
+            <button class="card-link" data-modal="modal-calendar">詳しく見る</button>
           </div>
         </div>
 
@@ -89,9 +91,8 @@
           <div class="card-img"><img src="images/projects/LabEscape.png" alt="Laboratory Escape" /></div>
           <div class="card-body">
             <h3 class="card-title">Laboratory Escape</h3>
-            <p class="card-desc">学内ハッカソンで制作した、ローカル環境で動作するステルスアクションゲームです。<br>
-              成績不振で研究棟の地下に監禁された主人公が、ある日無表情で謎の棒をくるくる回す生徒たちの姿を目撃しました。自分もいずれそうなるのではないかと思い、主人公が研究棟から脱出することを目指していきます。</p>
-            <a href="#" class="card-link">View &rarr;</a>
+            <p class="card-desc">学内ハッカソンで制作した、ローカル環境で動作するステルスアクションゲームです。</p>
+            <button class="card-link" data-modal="modal-labescape">詳しく見る</button>
           </div>
         </div>
 
@@ -106,7 +107,6 @@
       <ul class="links-list">
         <li><a href="#">GitHub</a></li>
         <li><a href="#">X / Twitter</a></li>
-        <li><a href="#">App Store</a></li>
       </ul>
     </div>
   </section>
@@ -115,6 +115,47 @@
     <div class="footer-bar"></div>
     <div class="footer-year">2026</div>
   </footer>
+
+  <!-- Modals -->
+  <dialog id="modal-retone" class="modal">
+    <div class="modal-inner">
+      <button class="modal-close" aria-label="閉じる">&times;</button>
+      <img src="images/projects/ReTone.png" alt="ReTone" class="modal-img" />
+      <h2 class="modal-title">ReTone</h2>
+      <p class="modal-desc">言葉の棘や冷たい印象といった余計なノイズを取り除き、本来伝えたい内容だけを、ストレスなく正しく受け取れるようにするチャットアプリです。</p>
+      <a href="#" class="modal-link" target="_blank">GitHubのリンク先</a>
+    </div>
+  </dialog>
+
+  <dialog id="modal-aidiary" class="modal">
+    <div class="modal-inner">
+      <button class="modal-close" aria-label="閉じる">&times;</button>
+      <img src="images/projects/AIDiary.png" alt="AI日記" class="modal-img" />
+      <h2 class="modal-title">AI日記</h2>
+      <p class="modal-desc">日記としての通常機能に加えて、AIによるフィードバックを実装したWebアプリです。日記を自己完結ではなくインタラクティブな体験へと拡張しました。</p>
+      <a href="#" class="modal-link" target="_blank">GitHubのリンク先</a>
+    </div>
+  </dialog>
+
+  <dialog id="modal-calendar" class="modal">
+    <div class="modal-inner">
+      <button class="modal-close" aria-label="閉じる">&times;</button>
+      <img src="images/projects/GreatCalender.png" alt="すごいカレンダー" class="modal-img" />
+      <h2 class="modal-title">すごいカレンダー</h2>
+      <p class="modal-desc">AIによる自動化機能を搭載した、カレンダー型タスク管理アプリです。ハッカソンでのチーム開発として制作しました。現在リポジトリは private のため、コードは非公開です。</p>
+      <a href="#" class="modal-link" target="_blank">GitHubのリンク先</a>
+    </div>
+  </dialog>
+
+  <dialog id="modal-labescape" class="modal">
+    <div class="modal-inner">
+      <button class="modal-close" aria-label="閉じる">&times;</button>
+      <img src="images/projects/LabEscape.png" alt="Laboratory Escape" class="modal-img" />
+      <h2 class="modal-title">Laboratory Escape</h2>
+      <p class="modal-desc">学内ハッカソンで制作した、ローカル環境で動作するステルスアクションゲームです。成績不振で研究棟の地下に監禁された主人公が脱出を目指すストーリー。</p>
+      <a href="#" class="modal-link" target="_blank">GitHubのリンク先</a>
+    </div>
+  </dialog>
 
   <script src="js/main.js"></script>
 </body>

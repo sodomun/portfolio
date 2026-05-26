@@ -47,3 +47,18 @@ function updateActiveNav() {
 
 window.addEventListener('scroll', updateActiveNav, { passive: true });
 updateActiveNav();
+
+// ===== モーダル =====
+document.querySelectorAll('[data-modal]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.getElementById(btn.dataset.modal).showModal();
+  });
+});
+
+document.querySelectorAll('.modal').forEach(modal => {
+  // backdropクリックで閉じる
+  modal.addEventListener('click', e => {
+    if (e.target === modal) modal.close();
+  });
+  modal.querySelector('.modal-close').addEventListener('click', () => modal.close());
+});
